@@ -1,0 +1,67 @@
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <i class="icon-plus"></i> <strong>Modificar Tarea</strong>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <fieldset class="form-group col-md-6">
+                            <label>* Titulo</label>
+                            <div class="input-group">
+                                <span class="input-group-prepend"><span class="input-group-text"><i
+                                            class="fa fa-male"></i></span></span>
+                                <input [(ngModel)]="task.title" placeholder="Titulo de la Tarea" type="text"
+                                    class="form-control">
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group col-md-6">
+                            <label>* Descripción</label>
+                            <div class="input-group">
+                                <span class="input-group-prepend"><span class="input-group-text"><i
+                                            class="fa fa-male"></i></span></span>
+                                <input [(ngModel)]="task.description" placeholder="Descripción de la Tarea" type="text"
+                                    class="form-control">
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group col-md-6">
+                            <label>* Tiempo Estimado</label>
+                            <div class="input-group">
+                                <span class="input-group-prepend"><span class="input-group-text"><i
+                                            class="fa fa-male"></i></span></span>
+                                <input [(ngModel)]="task.estimateTime" placeholder="Tiempo Estimado" type="number"
+                                    class="form-control">
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group col-md-6">
+                            <label>* Tiempo Ejecutado</label>
+                            <div class="input-group">
+                                <span class="input-group-prepend"><span class="input-group-text"><i
+                                            class="fa fa-male"></i></span></span>
+                                <input [(ngModel)]="task.workedTime" placeholder="Tiempo Estimado" type="number"
+                                    class="form-control">
+                            </div>
+                        </fieldset>
+                        <fieldset class="form-group col-md-6">
+                            <label>* Desarrollador</label>
+                            <div class="input-group">
+                                <span class="input-group-prepend"><span class="input-group-text"><i
+                                            class="fa fa-male"></i></span></span>
+                                <select [(ngModel)]="developerSelected" class="form-control">
+                                    <option [value]="0">Seleccione ...</option>
+                                    <option *ngFor="let g of developers" [value]="g.id">{{g.name}}</option>
+                                </select>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="card-footer">
+                        <button (click)="guardar()" [disabled]="!isValidForm()" class="btn btn-sm btn-primary"
+                            type="submit">
+                            <i class="fa fa-dot-circle-o"></i> Guardar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

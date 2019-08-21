@@ -1,0 +1,2 @@
+GRANT ALL PRIVILEGES ON TABLE developer TO todolist;
+GRANT ALL PRIVILEGES ON TABLE task TO todolist;

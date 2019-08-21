@@ -1,0 +1,7 @@
+<div *ngIf="message?.status === 200" class="alert alert-info" role="alert">
+    <strong>{{message.message}}</strong>
+</div>
+
+<div *ngIf="message?.status === 500 || message?.status === 503" class="alert alert-danger" role="alert">
+    <strong>{{message.message}}</strong>
+</div>
