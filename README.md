@@ -44,6 +44,7 @@ $ mvn spring-boot:run
 # view swagger
 http://localhost:8181/swagger-ui.html#/
 ```
+![alt text](https://raw.githubusercontent.com/fhersho/todolist/master/swagger.png)
 
 ### Installation WEB Client
 
@@ -59,7 +60,8 @@ $ npm install
 $ npm start
 
 ```
-
+![alt text](https://raw.githubusercontent.com/fhersho/todolist/master/list.png)
+![alt text](https://raw.githubusercontent.com/fhersho/todolist/master/new.png)
 ## Creators
 
 **Fernando Padilla**
